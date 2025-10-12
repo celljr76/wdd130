@@ -1,0 +1,25 @@
+body
+{
+    background-color: #5ca1d7;
+}
+h1:hover
+{
+    color: white;
+}
+.p1 p
+{
+    text-align: center;
+    color: white;
+}
+.p2 p
+{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+}
+.list p
+{
+    text-align: left;
+    font-weight: bold;
+}
