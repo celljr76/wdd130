@@ -294,7 +294,7 @@ nav
     margin:0;
 }
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    #hero, .home-grid,.rivers-grid {
         display: block;
         height: auto;
     }
@@ -327,7 +327,7 @@ nav
     #background {
         display: none;
     }
-    .mountains, .msg {
+    .mountains, .msg,.grand_canyon_arizona_image,.desolation_gray_canyon_image,.salmon_river_image{
         width: 80%;
         display: block;
         margin: 0 auto;
