@@ -220,6 +220,79 @@ nav
     opacity: .6;
     transform: scale(1.1);
 }
+.rivers-grid
+{
+    display:grid;
+    grid-template-columns: 1fr, 1fr;
+}
+#idaho
+{
+    display:grid;
+    grid-template-columns: 1fr,1fr;
+}
+.salmon_river_image
+{
+    width:100%;
+    height:75%;
+    grid-column:1/2;
+    grid-row:2/3;
+}
+#salmon_river_p
+{
+    grid-column:2/3;
+    grid-row: 2/3;
+    font-size: 1.5em;
+}
+#idaho h1
+{
+    grid-column: 1/3;
+    margin: 0;
+}
+#utah
+{
+    display:grid;
+    grid-template-columns: 1fr,1fr;
+}
+.desolation_gray_canyon_image
+{
+    width: 100%;
+    height:75%;
+    grid-column:2/3;
+}
+#desolation_gray_canyon_p
+{
+    grid-column:1/2;
+    grid-row:2/3;
+    font-size: 1.5em;
+}
+#utah h1
+{
+    grid-column: 1/3;
+    margin:0;
+}
+#arizona
+{
+    display:grid;
+    grid-template-columns: 1fr,1fr;
+}
+.grand_canyon_arizona_image
+{
+    width: 100%;
+    height:75%;
+    grid-column:1/2;
+    grid-row:2/3;
+}
+#grand_canyon_arizona_p
+{
+    grid-column:2/3;
+    grid-row:2/3;
+    font-size: 1.5em;
+}
+#arizona h1
+{
+    grid-column:1/3;
+    margin:0;
+}
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
