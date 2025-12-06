@@ -19,7 +19,7 @@
             </nav>
         </header>
         <main>
-            <div id = "description">
+            <div id = "descriptionMegabonk">
                 <p>
                     Megabonk is an indie game created by the indie creator Vedinad. The game was inspired by Vampire Survivors. Indie games (short for independent video game) are essentially games created
                     by smaller development teams or individuals without technical and financial support. Celljr76 first saw Megabonk being played by one of his favorite youtubers to watch "CaptianSparklez".
@@ -31,9 +31,74 @@
                     often, whcih makes it hard to the enemies around you and where you are going. This is a good game if you to challenge yourself with surviving and unlocking certain aspecs of the game as you go on.
                 </p>
             </div>
-            <img src="images/rsz_megabonk_gameplay2.png" alt="gameplay 1">
-            <img src="images/rsz_megabonk_gameplay3.png" alt="gameplay 2">
-            <img src="images/rsz_megabonk_death_screen.png" alt="deathscreen">
+            <div class = "simpleComponent">
+                <!-- Container for the image gallery -->
+                <div class="container">
+
+                    <!-- Full-width images with number text -->
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="images/rsz_megabonk_gameplay2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="images/rsz_megabonk_gameplay3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="images/rsz_1megabonk_gameplay.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="images/rsz_megabonk_gameplay4.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="images/rsz_megabonk_gameplay5.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="images/rsz_megabonk_death_screen.png" style="width:100%">
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Image text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- Thumbnail images -->
+                    <div class="row">
+                        <div class="column">
+                        <img class="demo cursor" src="images/rsz_megabonk_gameplay2.png" style="width:100%" onclick="currentSlide(1)" alt="gameplay 1">
+                        </div>
+                        <div class="column">
+                        <img class="demo cursor" src="images/rsz_megabonk_gameplay3.png" style="width:100%" onclick="currentSlide(2)" alt="gameplay 2">
+                        </div>
+                        <div class="column">
+                        <img class="demo cursor" src="images/rsz_1megabonk_gameplay.png" style="width:100%" onclick="currentSlide(3)" alt="gameplay 3">
+                        </div>
+                        <div class="column">
+                        <img class="demo cursor" src="images/rsz_megabonk_gameplay4.png" style="width:100%" onclick="currentSlide(4)" alt="gameplay 4">
+                        </div>
+                        <div class="column">
+                        <img class="demo cursor" src="images/rsz_megabonk_gameplay5.png" style="width:100%" onclick="currentSlide(5)" alt="gameplay 5">
+                        </div>
+                        <div class="column">
+                        <img class="demo cursor" src="images/rsz_megabonk_death_screen.png" style="width:100%" onclick="currentSlide(6)" alt="deathscreen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </main>
         <footer>
             <p> We All Be Gamers &copy; 2025 - Phillip Illguth</p>
@@ -51,5 +116,39 @@
             </div>
         </footer>
     </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+    
 </body>
 </html>
